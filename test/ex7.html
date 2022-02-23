@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<meta charset="utf-8">
+<title>Animate an element, by changing its height and width</title>
+</head>
+<body>
+<button id="btn1">Animate height & width</button>
+<button id="btn2">Reset</button>
+<div id="box" style="background:
+#B45F04;height:100px;width:100px;margin:6px;"></div>
+<script>
+  $( "#btn1" ).click(function() {
+  $( "#box" ).animate({
+   width: "300px",
+   height: "300px",
+    }, 1500 );
+});
+
+$( "#btn2" ).click(function() {
+  $( "#box" ).animate({
+   width: "100px",
+   height: "100px",
+    }, 1500 );
+});
+</script>
+</body>
+</html>

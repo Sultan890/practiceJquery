@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="checkbox">
+      <input id="check" name="checkbox" type="checkbox">
+      <label for="check">Some Text Here</label><!-- for must be the id of input -->
+    </div>
+    <input type="submit" name="anmelden" class="button" id="btncheck" value="Send" />
+
+    <script>
+      $(function() {
+  var chk = $('#check');
+  var btn = $('#btncheck');
+
+  chk.on('change', function() {
+    btn.prop("disabled", !this.checked);//true: disabled, false: enabled
+  }).trigger('change'); //page load trigger event
+});
+    </script>
+  </body>
+</html>
